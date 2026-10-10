@@ -70,8 +70,9 @@ a{color:inherit;text-decoration:none}
   display:flex;gap:6px;background:var(--ink);padding:8px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(0,0,0,.45)}
 .dock a{width:50px;height:50px;border-radius:50%;display:grid;place-items:center}
 .dock svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.dock a.call{background:var(--yellow)}
-.dock a.call svg{stroke:var(--ink)}
+.dock a{transition:background-color .2s ease,transform .2s ease}
+.dock a.active{background:var(--yellow);transform:scale(1.04)}
+.dock a.active svg{stroke:var(--ink)}
 @media (min-width:760px){
   .dnav{display:flex}
   .dock{display:none}
